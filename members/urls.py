@@ -8,5 +8,8 @@ from . import views
 urlpatterns = [
     #~ Mapping the URL 'members/' to the 'members' view function in views.py
     #~ The 'name' parameter gives the URL pattern a name for easy reference
+    path('', views.main, name='main'),
     path('members/', views.members, name='members'),
+    path('members/details/<int:id>', views.details, name='details'),
+    path('testing/', views.testing, name='testing'), 
 ]
